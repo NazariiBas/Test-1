@@ -41,6 +41,8 @@ def print_with_pause(text):
 
 # Початок гри
 print_with_pause("Ласкаво просимо до текстової гри!")
+print_with_pause("Будь ласка вводіть тільки 1 або 2 для вибору варіанту відповіді")
+print_with_pause("Інакше гра буде зупинена")
 print_with_pause("Ви знаходитесь у невеличкому покинутому місті. Виберіть напрямок подорожі:")
 choice = input("1. Піти у поліцейський участок.\n2. Піти у покинутий банк.\n")
 
@@ -69,20 +71,29 @@ if choice == '1':
                 print_with_pause("Ви продовжуєте свою подорож, не знаючи, що вас чекає.")
                 print_with_pause("Гра завершена. Ваш рахунок: " + str(score))
                 print_with_pause("Дякуємо за гру!")
-            else:
+            elif choice == '2':
                 print_with_pause("Ви не встигли вийти та стався обвал")
                 print_with_pause("тепер ви тут назавжди")
                 print_with_pause("Це кінець!")
+            else:
+                print_with_pause("Ви ввели неправильну відповідь")
+                print_with_pause("Розпочніть гру заново!")
 
                 
-        else:
+        elif choice == '2':
             print_with_pause("Ви підковзнулись та впали в яму")
             print_with_pause("Це кінець!")
-    else:
+        else:
+            print_with_pause("Ви ввели неправильну відповідь")
+            print_with_pause("Розпочніть гру заново!")
+    elif choice == '2':
         print_with_pause("Ви спробували втекти з міста та натрапили мостра,який вас вбив")
         print_with_pause("Це кінець гри!")
+    else:
+        print_with_pause("Ви ввели неправильну відповідь")
+        print_with_pause("Розпочніть гру заново!")
         
-else:
+elif choice == '2':
     print_with_pause("Ви вирушили у покинутий банк.")
     print_with_pause("Тут виявилось 2 шляхи.")
     print_with_pause("Який шлях ви оберете?")
@@ -92,7 +103,7 @@ else:
         print_with_pause("Ви пішли ліворуч та натрапили на смертельну пастку!")
         print_with_pause("Ви померли!")
         print_with_pause("Це кінець гри!")
-    else:
+    elif choice == '2':
         print_with_pause("Ви пішли праворуч.")
         print_with_pause("пройшовши декілька метрів ви знайшли двері")
         print_with_pause("Увійшовши ви знайшли скарб")
@@ -103,10 +114,19 @@ else:
         if choice == '1':
             print_with_pause("Зайшовши в лікарню вас знайшов монстр і вбив вас")
             print_with_pause("Це кінець гри!")
-        else:
+        elif choice == '2':
             print_with_pause("Ви вийшли та продовжили свою подорож")
             print_with_pause("Ви продовжуєте свою подорож, не знаючи, що вас чекає.")
             print_with_pause("Гра завершена. Ваш рахунок: " + str(score))
             print_with_pause("Ваш інвентар: " + ', '.join(inventory))
             print_with_pause("Дякуємо за гру!")
+        else:
+            print_with_pause("Ви ввели неправильну відповідь")
+            print_with_pause("Розпочніть гру заново!")
+    else:
+        print_with_pause("Ви ввели неправильну відповідь")
+        print_with_pause("Розпочніть гру заново!")
+else:
+    print_with_pause("Ви ввели неправильну відповідь")
+    print_with_pause("Розпочніть гру заново!")
 
