@@ -118,7 +118,6 @@ elif choice == '2':
             print_with_pause("Ви вийшли та продовжили свою подорож")
             print_with_pause("Ви продовжуєте свою подорож, не знаючи, що вас чекає.")
             print_with_pause("Гра завершена. Ваш рахунок: " + str(score))
-            print_with_pause("Ваш інвентар: " + ', '.join(inventory))
             print_with_pause("Дякуємо за гру!")
         else:
             print_with_pause("Ви ввели неправильну відповідь")
@@ -129,4 +128,4 @@ elif choice == '2':
 else:
     print_with_pause("Ви ввели неправильну відповідь")
     print_with_pause("Розпочніть гру заново!")
-
+    
